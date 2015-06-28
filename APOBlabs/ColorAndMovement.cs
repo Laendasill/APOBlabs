@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
+
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ImageMagick.Drawables;
@@ -15,10 +17,12 @@ namespace APOBlabs
     {
         PictureBox[] arrayOfImages;
         int item = 0;
+        int lastArrayClickIndex = 0;
         int maxitem = 0;
         bool ChangeColorMode = false;
         MainWindow wind;
         Color currentColor;
+        Bitmap LastChange;
         public ColorAndMovement(MainWindow im)
         {
             InitializeComponent();
@@ -75,20 +79,27 @@ namespace APOBlabs
             }
             else FileOpen.Dispose();
         }
-
+        Bitmap Copy(Bitmap bitmap)
+        {
+            return new Bitmap(bitmap);
+        }
         void pb_MouseClick(object sender, MouseEventArgs e)
         {
             PictureBox pom = (PictureBox)sender;
             Bitmap pomm = (Bitmap)pom.Image;
             
             Color pixel  = pomm.GetPixel(e.X,e.Y);
+            lastArrayClickIndex = Array.IndexOf(arrayOfImages,pom);
             if (ChangeColorMode == true)
             {
+                
+                LastChange = this.Copy(pomm);
+                
                 ChangeColor(pom, pixel);
             }
             else
             {
-                MessageBox.Show(e.X.ToString() + " | " + e.Y.ToString() + "=" + pixel.ToString());
+                MessageBox.Show("Kolory" + pixel.ToString()+ "(Żeby kolorować obrazek należy zaznaczyć opcje Kolorowanie)");
             }
 
         }
@@ -145,7 +156,10 @@ namespace APOBlabs
         private Color GetChosedColor()
         {
             Color c = currentColor;
-
+            if (c == null)
+            {
+                c = Color.Black;
+            }
             return c;
         }
 
@@ -154,7 +168,12 @@ namespace APOBlabs
             String[] images = new String[arrayOfImages.Length];
             String log = "";
             int i = 0;
-            String tmpDir = @"\tmp";
+            String tmpDir = @"tmp\";
+            if(Directory.Exists(@"tmp\")){
+
+            } else {
+                Directory.CreateDirectory(@"tmp\");
+            }
             using (ImageMagick.MagickImageCollection collection = new MagickImageCollection())
             {
                 foreach (PictureBox image in arrayOfImages)
@@ -169,13 +188,13 @@ namespace APOBlabs
                 foreach (String s in images)
                 {
                    collection.Add(s);
-                    collection.Write(@"\tmp\animated.gif");
+                    collection.Write(@"tmp\animated.gif");
                     log += s;
                 }
 
                // MessageBox.Show(log);
                 
-                ImageWindow pos = new ImageWindow(wind,@"\tmp\animated.gif");
+                ImageWindow pos = new ImageWindow(wind,@"tmp\animated.gif");
             }
         }
 
@@ -187,6 +206,14 @@ namespace APOBlabs
                 currentColor = colorDialog2.Color;
                 pom.BackColor = colorDialog2.Color;
             }
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+           
+                arrayOfImages[lastArrayClickIndex].Image = (Image)LastChange;
+            
         }
 
         

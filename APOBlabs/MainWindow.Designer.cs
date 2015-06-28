@@ -298,6 +298,7 @@
             // 
             // projectToolStripMenuItem
             // 
+            this.projectToolStripMenuItem.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
             this.projectToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.projectToolStripMenuItem.Text = "Project";

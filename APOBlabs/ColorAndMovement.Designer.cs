@@ -30,12 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ImagesLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.Colormode = new System.Windows.Forms.CheckBox();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsGifToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImagesLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.Colormode = new System.Windows.Forms.CheckBox();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.ColorChoose = new System.Windows.Forms.Button();
+            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addImagesToolStripMenuItem,
-            this.saveToolStripMenuItem});
+            this.saveToolStripMenuItem,
+            this.undoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(393, 24);
@@ -56,6 +58,21 @@
             this.addImagesToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.addImagesToolStripMenuItem.Text = "AddImages";
             this.addImagesToolStripMenuItem.Click += new System.EventHandler(this.addImagesToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveAsGifToolStripMenuItem});
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Text = "Save";
+            // 
+            // saveAsGifToolStripMenuItem
+            // 
+            this.saveAsGifToolStripMenuItem.Name = "saveAsGifToolStripMenuItem";
+            this.saveAsGifToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.saveAsGifToolStripMenuItem.Text = "Save as gif";
+            this.saveAsGifToolStripMenuItem.Click += new System.EventHandler(this.saveAsGifToolStripMenuItem_Click);
             // 
             // ImagesLayout
             // 
@@ -81,21 +98,6 @@
             this.Colormode.UseVisualStyleBackColor = true;
             this.Colormode.CheckedChanged += new System.EventHandler(this.Colormode_CheckedChanged);
             // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveAsGifToolStripMenuItem});
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.saveToolStripMenuItem.Text = "Save";
-            // 
-            // saveAsGifToolStripMenuItem
-            // 
-            this.saveAsGifToolStripMenuItem.Name = "saveAsGifToolStripMenuItem";
-            this.saveAsGifToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveAsGifToolStripMenuItem.Text = "Save as gif";
-            this.saveAsGifToolStripMenuItem.Click += new System.EventHandler(this.saveAsGifToolStripMenuItem_Click);
-            // 
             // colorDialog2
             // 
             this.colorDialog2.AllowFullOpen = false;
@@ -111,6 +113,13 @@
             this.ColorChoose.Text = "button1";
             this.ColorChoose.UseVisualStyleBackColor = true;
             this.ColorChoose.Click += new System.EventHandler(this.ColorChoose_Click);
+            // 
+            // undoToolStripMenuItem
+            // 
+            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.undoToolStripMenuItem.Text = "Undo";
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // ColorAndMovement
             // 
@@ -143,5 +152,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveAsGifToolStripMenuItem;
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.Button ColorChoose;
+        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
     }
 }
