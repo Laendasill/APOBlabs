@@ -231,7 +231,7 @@ namespace APOBlabs
 
         private void projectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new ColorAndMovement();
+            new ColorAndMovement(this);
         }
 
 

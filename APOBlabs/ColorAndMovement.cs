@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ImageMagick.Drawables;
+using ImageMagick;
 namespace APOBlabs
 {
     public partial class ColorAndMovement : Form
@@ -16,13 +17,17 @@ namespace APOBlabs
         int item = 0;
         int maxitem = 0;
         bool ChangeColorMode = false;
-        public ColorAndMovement()
+        MainWindow wind;
+        Color currentColor;
+        public ColorAndMovement(MainWindow im)
         {
             InitializeComponent();
             ImagesLayout.ColumnCount = 0;
             ImagesLayout.RowCount = 0;
             ImagesLayout.AutoScroll = false;
+            wind = im;
             Show();
+           
         }
 
         private void addImagesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +54,7 @@ namespace APOBlabs
                             pb.Height = loadedImage.Height;
                             pb.Width = loadedImage.Width;
                             pb.Image = loadedImage;
+                            pb.Tag = image;
                             pb.MouseClick += pb_MouseClick;
                             arrayOfImages[i] = pb;
                            // ImagesLayout.Width = loadedImage.Width;
@@ -138,9 +144,49 @@ namespace APOBlabs
 
         private Color GetChosedColor()
         {
-            Color c = Color.Blue;
+            Color c = currentColor;
 
             return c;
+        }
+
+        private void saveAsGifToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String[] images = new String[arrayOfImages.Length];
+            String log = "";
+            int i = 0;
+            String tmpDir = @"\tmp";
+            using (ImageMagick.MagickImageCollection collection = new MagickImageCollection())
+            {
+                foreach (PictureBox image in arrayOfImages)
+                {
+                    Bitmap temp = (Bitmap)image.Image;
+                    String name = tmpDir +"img" + i + ".png";
+                   temp.Save(name);
+                    images[i] = name;
+                    i += 1;
+                }
+
+                foreach (String s in images)
+                {
+                   collection.Add(s);
+                    collection.Write(@"\tmp\animated.gif");
+                    log += s;
+                }
+
+               // MessageBox.Show(log);
+                
+                ImageWindow pos = new ImageWindow(wind,@"\tmp\animated.gif");
+            }
+        }
+
+        private void ColorChoose_Click(object sender, EventArgs e)
+        {
+            Button pom = (Button)sender;
+            if (colorDialog2.ShowDialog() == DialogResult.OK)
+            {
+                currentColor = colorDialog2.Color;
+                pom.BackColor = colorDialog2.Color;
+            }
         }
 
         
