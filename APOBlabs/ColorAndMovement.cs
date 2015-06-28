@@ -31,7 +31,7 @@ namespace APOBlabs
             ImagesLayout.AutoScroll = false;
             wind = im;
             Show();
-           
+            arrayOfImages = null;
         }
 
         private void addImagesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +44,8 @@ namespace APOBlabs
             if (Result == DialogResult.OK)
             {
                 //ImageWindow img = new ImageWindow(this, FileOpen.FileName);
+                ImagesLayout.ColumnCount = 0;
+                ImagesLayout.RowCount = 0;
                 arrayOfImages = new PictureBox[FileOpen.FileNames.Length];
                 int i = 0;
                 maxitem = FileOpen.FileNames.Length;
@@ -113,6 +115,7 @@ namespace APOBlabs
 
         private void UpdateImages()
         {
+
             foreach (PictureBox i in arrayOfImages)
             {
                 ImagesLayout.Controls.Add(i);
