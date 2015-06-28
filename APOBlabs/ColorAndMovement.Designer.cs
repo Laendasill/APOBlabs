@@ -37,6 +37,7 @@
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.ColorChoose = new System.Windows.Forms.Button();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,5 +154,6 @@
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.Button ColorChoose;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

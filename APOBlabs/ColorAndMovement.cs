@@ -165,36 +165,47 @@ namespace APOBlabs
 
         private void saveAsGifToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String[] images = new String[arrayOfImages.Length];
-            String log = "";
-            int i = 0;
-            String tmpDir = @"tmp\";
-            if(Directory.Exists(@"tmp\")){
-
-            } else {
-                Directory.CreateDirectory(@"tmp\");
-            }
-            using (ImageMagick.MagickImageCollection collection = new MagickImageCollection())
+            String savedgif = null;
+            saveFileDialog1.FileName = "animation.gif";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                foreach (PictureBox image in arrayOfImages)
-                {
-                    Bitmap temp = (Bitmap)image.Image;
-                    String name = tmpDir +"img" + i + ".png";
-                   temp.Save(name);
-                    images[i] = name;
-                    i += 1;
-                }
+               
+                savedgif = saveFileDialog1.FileName;
+            
+           
+            
+                String[] images = new String[arrayOfImages.Length];
+                String log = "";
+                int i = 0;
+                String tmpDir = @"tmp\";
+                if(Directory.Exists(@"tmp\")){
 
-                foreach (String s in images)
-                {
-                   collection.Add(s);
-                    collection.Write(@"tmp\animated.gif");
-                    log += s;
+                } else {
+                    Directory.CreateDirectory(@"tmp\");
                 }
+                using (ImageMagick.MagickImageCollection collection = new MagickImageCollection())
+                {
+               
+                    foreach (PictureBox image in arrayOfImages)
+                    {
+                        Bitmap temp = (Bitmap)image.Image;
+                        String name = tmpDir +"img" + i + ".png";
+                       temp.Save(name);
+                        images[i] = name;
+                        i += 1;
+                    }
 
-               // MessageBox.Show(log);
-                
-                ImageWindow pos = new ImageWindow(wind,@"tmp\animated.gif");
+                    foreach (String s in images)
+                    {
+                       collection.Add(s);
+                       collection.Write(savedgif);
+                        log += s;
+                    }
+
+                   // MessageBox.Show(log);
+
+                    ImageWindow pos = new ImageWindow(wind, savedgif);
+                }
             }
         }
 
