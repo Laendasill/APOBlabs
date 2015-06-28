@@ -16,7 +16,7 @@ namespace APOBlabs
     public partial class ColorAndMovement : Form
     {
         PictureBox[] arrayOfImages;
-        int item = 0;
+        //int item = 0;
         int lastArrayClickIndex = 0;
         int maxitem = 0;
         bool ChangeColorMode = false;
