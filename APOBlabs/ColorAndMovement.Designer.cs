@@ -38,6 +38,7 @@
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.ColorChoose = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.animateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +47,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addImagesToolStripMenuItem,
             this.saveToolStripMenuItem,
-            this.undoToolStripMenuItem});
+            this.undoToolStripMenuItem,
+            this.animateToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(393, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(384, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,21 +86,25 @@
             // 
             // ImagesLayout
             // 
+            this.ImagesLayout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ImagesLayout.AutoScroll = true;
             this.ImagesLayout.AutoSize = true;
+            this.ImagesLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ImagesLayout.ColumnCount = 1;
-            this.ImagesLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ImagesLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.ImagesLayout.Location = new System.Drawing.Point(0, 27);
             this.ImagesLayout.Name = "ImagesLayout";
             this.ImagesLayout.RowCount = 1;
-            this.ImagesLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ImagesLayout.Size = new System.Drawing.Size(86, 23);
+            this.ImagesLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ImagesLayout.Size = new System.Drawing.Size(0, 0);
             this.ImagesLayout.TabIndex = 1;
             // 
             // Colormode
             // 
+            this.Colormode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Colormode.AutoSize = true;
-            this.Colormode.Location = new System.Drawing.Point(297, 33);
+            this.Colormode.Location = new System.Drawing.Point(278, 28);
             this.Colormode.Name = "Colormode";
             this.Colormode.Size = new System.Drawing.Size(84, 17);
             this.Colormode.TabIndex = 0;
@@ -114,25 +120,37 @@
             // 
             // ColorChoose
             // 
-            this.ColorChoose.Location = new System.Drawing.Point(297, 56);
+            this.ColorChoose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ColorChoose.Location = new System.Drawing.Point(278, 51);
             this.ColorChoose.Name = "ColorChoose";
-            this.ColorChoose.Size = new System.Drawing.Size(84, 23);
+            this.ColorChoose.Size = new System.Drawing.Size(94, 23);
             this.ColorChoose.TabIndex = 2;
             this.ColorChoose.Text = "Wybór koloru";
             this.ColorChoose.UseVisualStyleBackColor = true;
             this.ColorChoose.Click += new System.EventHandler(this.ColorChoose_Click);
+            // 
+            // animateToolStripMenuItem
+            // 
+            this.animateToolStripMenuItem.Name = "animateToolStripMenuItem";
+            this.animateToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.animateToolStripMenuItem.Text = "Animate";
+            this.animateToolStripMenuItem.Click += new System.EventHandler(this.animateToolStripMenuItem_Click);
             // 
             // ColorAndMovement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(393, 455);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(384, 362);
             this.Controls.Add(this.ColorChoose);
             this.Controls.Add(this.Colormode);
             this.Controls.Add(this.ImagesLayout);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(2048, 400);
+            this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "ColorAndMovement";
             this.Text = "ColorAndMovement";
             this.Load += new System.EventHandler(this.ColorAndMovement_Load);
@@ -155,5 +173,6 @@
         private System.Windows.Forms.Button ColorChoose;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem animateToolStripMenuItem;
     }
 }

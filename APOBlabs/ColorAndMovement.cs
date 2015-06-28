@@ -145,6 +145,7 @@ namespace APOBlabs
                     }
                     else
                     {
+
                         pomm.SetPixel(x, y, GetChosedColor());
                     }
                 }
@@ -225,6 +226,45 @@ namespace APOBlabs
            
                 arrayOfImages[lastArrayClickIndex].Image = (Image)LastChange;
             
+        }
+
+        private void animateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String[] images = new String[arrayOfImages.Length];
+            String log = "";
+            int i = 0;
+            String tmpDir = @"tmp\";
+            if (Directory.Exists(@"tmp\"))
+            {
+
+            }
+            else
+            {
+                Directory.CreateDirectory(@"tmp\");
+            }
+            using (ImageMagick.MagickImageCollection collection = new MagickImageCollection())
+            {
+
+                foreach (PictureBox image in arrayOfImages)
+                {
+                    Bitmap temp = (Bitmap)image.Image;
+                    String name = tmpDir + "img" + i + ".png";
+                    temp.Save(name);
+                    images[i] = name;
+                    i += 1;
+                }
+
+                foreach (String s in images)
+                {
+                    collection.Add(s);
+                    collection.Write(@"tmp\animation.gif");
+                    log += s;
+                }
+
+                // MessageBox.Show(log);
+
+                ImageWindow pos = new ImageWindow(wind, @"tmp\animation.gif");
+            }
         }
 
         
