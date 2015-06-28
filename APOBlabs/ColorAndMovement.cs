@@ -257,10 +257,15 @@ namespace APOBlabs
                 foreach (String s in images)
                 {
                     collection.Add(s);
-                    collection.Write(@"tmp\animation.gif");
+                    
                     log += s;
                 }
+                for (int im = 0; im < images.Length; im++ )
+                {
+                    collection[im].AnimationDelay = 50;
 
+                }
+                collection.Write(@"tmp\animation.gif");
                 // MessageBox.Show(log);
 
                 ImageWindow pos = new ImageWindow(wind, @"tmp\animation.gif");
