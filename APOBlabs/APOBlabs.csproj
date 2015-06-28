@@ -52,6 +52,7 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="Magick.NET-x64">
       <HintPath>bin\Magick.NET-7.0.0.0015-Q16-x64\net40-client\Magick.NET-x64.dll</HintPath>
     </Reference>
@@ -63,6 +64,8 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+=======
+>>>>>>> FETCH_HEAD
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,7 +76,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+<<<<<<< HEAD
     <Reference Include="WindowsBase" />
+=======
+>>>>>>> FETCH_HEAD
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs">
@@ -88,12 +94,15 @@
     <Compile Include="Brightness.Designer.cs">
       <DependentUpon>Brightness.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="ColorAndMovement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ColorAndMovement.Designer.cs">
       <DependentUpon>ColorAndMovement.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> FETCH_HEAD
     <Compile Include="Contrast.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,9 +165,12 @@
     <EmbeddedResource Include="Brightness.resx">
       <DependentUpon>Brightness.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="ColorAndMovement.resx">
       <DependentUpon>ColorAndMovement.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> FETCH_HEAD
     <EmbeddedResource Include="Contrast.resx">
       <DependentUpon>Contrast.cs</DependentUpon>
     </EmbeddedResource>

@@ -229,11 +229,14 @@ namespace APOBlabs
             new Filters(aiw);
         }
 
+<<<<<<< HEAD
         private void projectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new ColorAndMovement(this);
         }
 
+=======
+>>>>>>> FETCH_HEAD
 
     }
 }

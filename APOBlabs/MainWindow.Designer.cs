@@ -56,7 +56,10 @@
             this.MenuOper_Calculation = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuOper_Filters = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuAbout = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+>>>>>>> FETCH_HEAD
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,12 +71,19 @@
             this.MenuFile,
             this.MenuImage,
             this.MenuOperations,
+<<<<<<< HEAD
             this.MenuAbout,
             this.projectToolStripMenuItem});
             this.MenuBar.Location = new System.Drawing.Point(0, 0);
             this.MenuBar.Name = "MenuBar";
             this.MenuBar.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.MenuBar.Size = new System.Drawing.Size(696, 24);
+=======
+            this.MenuAbout});
+            this.MenuBar.Location = new System.Drawing.Point(0, 0);
+            this.MenuBar.Name = "MenuBar";
+            this.MenuBar.Size = new System.Drawing.Size(870, 28);
+>>>>>>> FETCH_HEAD
             this.MenuBar.TabIndex = 5;
             this.MenuBar.Text = "menuStrip1";
             // 
@@ -86,14 +96,22 @@
             this.MenuFile_SaveAs});
             this.MenuFile.ForeColor = System.Drawing.Color.DarkGray;
             this.MenuFile.Name = "MenuFile";
+<<<<<<< HEAD
             this.MenuFile.Size = new System.Drawing.Size(37, 20);
+=======
+            this.MenuFile.Size = new System.Drawing.Size(44, 24);
+>>>>>>> FETCH_HEAD
             this.MenuFile.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+<<<<<<< HEAD
             this.openToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+=======
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
+>>>>>>> FETCH_HEAD
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.MenuFile_Open_Click);
             // 
@@ -102,7 +120,11 @@
             this.MenuFile_Save.Enabled = false;
             this.MenuFile_Save.Name = "MenuFile_Save";
             this.MenuFile_Save.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+<<<<<<< HEAD
             this.MenuFile_Save.Size = new System.Drawing.Size(193, 22);
+=======
+            this.MenuFile_Save.Size = new System.Drawing.Size(226, 24);
+>>>>>>> FETCH_HEAD
             this.MenuFile_Save.Text = "Save";
             this.MenuFile_Save.DropDownOpened += new System.EventHandler(this.check);
             // 
@@ -112,7 +134,11 @@
             this.MenuFile_SaveAs.Name = "MenuFile_SaveAs";
             this.MenuFile_SaveAs.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
+<<<<<<< HEAD
             this.MenuFile_SaveAs.Size = new System.Drawing.Size(193, 22);
+=======
+            this.MenuFile_SaveAs.Size = new System.Drawing.Size(226, 24);
+>>>>>>> FETCH_HEAD
             this.MenuFile_SaveAs.Text = "Save as...";
             this.MenuFile_SaveAs.Click += new System.EventHandler(this.MenuFile_SaveAs_Click);
             // 
@@ -126,7 +152,11 @@
             this.MenuImage.Enabled = false;
             this.MenuImage.ForeColor = System.Drawing.Color.DarkGray;
             this.MenuImage.Name = "MenuImage";
+<<<<<<< HEAD
             this.MenuImage.Size = new System.Drawing.Size(52, 20);
+=======
+            this.MenuImage.Size = new System.Drawing.Size(63, 24);
+>>>>>>> FETCH_HEAD
             this.MenuImage.Text = "Image";
             this.MenuImage.Click += new System.EventHandler(this.check);
             // 
@@ -134,7 +164,11 @@
             // 
             this.MenuImage_Undo.Name = "MenuImage_Undo";
             this.MenuImage_Undo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+<<<<<<< HEAD
             this.MenuImage_Undo.Size = new System.Drawing.Size(173, 22);
+=======
+            this.MenuImage_Undo.Size = new System.Drawing.Size(201, 24);
+>>>>>>> FETCH_HEAD
             this.MenuImage_Undo.Text = "Undo";
             this.MenuImage_Undo.Click += new System.EventHandler(this.MenuImage_Undo_Click);
             // 
@@ -142,20 +176,32 @@
             // 
             this.MenuImage_Duplicate.Name = "MenuImage_Duplicate";
             this.MenuImage_Duplicate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+<<<<<<< HEAD
             this.MenuImage_Duplicate.Size = new System.Drawing.Size(173, 22);
+=======
+            this.MenuImage_Duplicate.Size = new System.Drawing.Size(201, 24);
+>>>>>>> FETCH_HEAD
             this.MenuImage_Duplicate.Text = "Duplicate";
             this.MenuImage_Duplicate.Click += new System.EventHandler(this.MenuImage_Duplicate_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+<<<<<<< HEAD
             this.toolStripSeparator1.Size = new System.Drawing.Size(170, 6);
+=======
+            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
+>>>>>>> FETCH_HEAD
             // 
             // MenuImage_Histogram
             // 
             this.MenuImage_Histogram.Name = "MenuImage_Histogram";
             this.MenuImage_Histogram.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+<<<<<<< HEAD
             this.MenuImage_Histogram.Size = new System.Drawing.Size(173, 22);
+=======
+            this.MenuImage_Histogram.Size = new System.Drawing.Size(201, 24);
+>>>>>>> FETCH_HEAD
             this.MenuImage_Histogram.Text = "Histogram";
             this.MenuImage_Histogram.Click += new System.EventHandler(this.MenuImage_Histogram_Click);
             // 
@@ -169,7 +215,11 @@
             this.MenuOperations.Enabled = false;
             this.MenuOperations.ForeColor = System.Drawing.Color.DarkGray;
             this.MenuOperations.Name = "MenuOperations";
+<<<<<<< HEAD
             this.MenuOperations.Size = new System.Drawing.Size(77, 20);
+=======
+            this.MenuOperations.Size = new System.Drawing.Size(94, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOperations.Text = "Operations";
             // 
             // MenuOperations_Adjustment
@@ -184,61 +234,97 @@
             this.MenuOper_Adj_Treshold,
             this.MenuOper_Adj_Posterize});
             this.MenuOperations_Adjustment.Name = "MenuOperations_Adjustment";
+<<<<<<< HEAD
             this.MenuOperations_Adjustment.Size = new System.Drawing.Size(138, 22);
+=======
+            this.MenuOperations_Adjustment.Size = new System.Drawing.Size(175, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOperations_Adjustment.Text = "Adjustment";
             // 
             // MenuOper_Adj_Gamma
             // 
             this.MenuOper_Adj_Gamma.Name = "MenuOper_Adj_Gamma";
+<<<<<<< HEAD
             this.MenuOper_Adj_Gamma.Size = new System.Drawing.Size(166, 22);
+=======
+            this.MenuOper_Adj_Gamma.Size = new System.Drawing.Size(193, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Adj_Gamma.Text = "Gamma";
             this.MenuOper_Adj_Gamma.Click += new System.EventHandler(this.MenuOper_Adj_Gamma_Click);
             // 
             // MenuOper_Adj_Contrast
             // 
             this.MenuOper_Adj_Contrast.Name = "MenuOper_Adj_Contrast";
+<<<<<<< HEAD
             this.MenuOper_Adj_Contrast.Size = new System.Drawing.Size(166, 22);
+=======
+            this.MenuOper_Adj_Contrast.Size = new System.Drawing.Size(193, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Adj_Contrast.Text = "Contrast";
             this.MenuOper_Adj_Contrast.Click += new System.EventHandler(this.MenuOper_Adj_Contrast_Click);
             // 
             // MenuOper_Adj_Brightness
             // 
             this.MenuOper_Adj_Brightness.Name = "MenuOper_Adj_Brightness";
+<<<<<<< HEAD
             this.MenuOper_Adj_Brightness.Size = new System.Drawing.Size(166, 22);
+=======
+            this.MenuOper_Adj_Brightness.Size = new System.Drawing.Size(193, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Adj_Brightness.Text = "Brightness";
             this.MenuOper_Adj_Brightness.Click += new System.EventHandler(this.MenuOper_Adj_Brightness_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
+<<<<<<< HEAD
             this.toolStripSeparator2.Size = new System.Drawing.Size(163, 6);
+=======
+            this.toolStripSeparator2.Size = new System.Drawing.Size(190, 6);
+>>>>>>> FETCH_HEAD
             // 
             // MenuOper_Adj_Greyscale
             // 
             this.MenuOper_Adj_Greyscale.Name = "MenuOper_Adj_Greyscale";
             this.MenuOper_Adj_Greyscale.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+<<<<<<< HEAD
             this.MenuOper_Adj_Greyscale.Size = new System.Drawing.Size(166, 22);
+=======
+            this.MenuOper_Adj_Greyscale.Size = new System.Drawing.Size(193, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Adj_Greyscale.Text = "Greyscale";
             this.MenuOper_Adj_Greyscale.Click += new System.EventHandler(this.MenuOper_Adj_Greyscale_Click);
             // 
             // MenuOper_Adj_Negative
             // 
             this.MenuOper_Adj_Negative.Name = "MenuOper_Adj_Negative";
+<<<<<<< HEAD
             this.MenuOper_Adj_Negative.Size = new System.Drawing.Size(166, 22);
+=======
+            this.MenuOper_Adj_Negative.Size = new System.Drawing.Size(193, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Adj_Negative.Text = "Negative";
             this.MenuOper_Adj_Negative.Click += new System.EventHandler(this.MenuOper_Adj_Negative_Click);
             // 
             // MenuOper_Adj_Treshold
             // 
             this.MenuOper_Adj_Treshold.Name = "MenuOper_Adj_Treshold";
+<<<<<<< HEAD
             this.MenuOper_Adj_Treshold.Size = new System.Drawing.Size(166, 22);
+=======
+            this.MenuOper_Adj_Treshold.Size = new System.Drawing.Size(193, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Adj_Treshold.Text = "Treshold";
             this.MenuOper_Adj_Treshold.Click += new System.EventHandler(this.MenuOper_Adj_Treshold_Click);
             // 
             // MenuOper_Adj_Posterize
             // 
             this.MenuOper_Adj_Posterize.Name = "MenuOper_Adj_Posterize";
+<<<<<<< HEAD
             this.MenuOper_Adj_Posterize.Size = new System.Drawing.Size(166, 22);
+=======
+            this.MenuOper_Adj_Posterize.Size = new System.Drawing.Size(193, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Adj_Posterize.Text = "Posterization";
             this.MenuOper_Adj_Posterize.Click += new System.EventHandler(this.MenuOper_Adj_Posterize_Click);
             // 
@@ -249,41 +335,65 @@
             this.MenuOper_Equ_Random,
             this.MenuOper_Equ_Neighbor});
             this.MenuOperations_Equ_Neighborhood.Name = "MenuOperations_Equ_Neighborhood";
+<<<<<<< HEAD
             this.MenuOperations_Equ_Neighborhood.Size = new System.Drawing.Size(138, 22);
+=======
+            this.MenuOperations_Equ_Neighborhood.Size = new System.Drawing.Size(175, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOperations_Equ_Neighborhood.Text = "Equalization";
             // 
             // MenuOper_Equ_Average
             // 
             this.MenuOper_Equ_Average.Name = "MenuOper_Equ_Average";
+<<<<<<< HEAD
             this.MenuOper_Equ_Average.Size = new System.Drawing.Size(152, 22);
+=======
+            this.MenuOper_Equ_Average.Size = new System.Drawing.Size(176, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Equ_Average.Text = "Average";
             this.MenuOper_Equ_Average.Click += new System.EventHandler(this.MenuOper_Equ_Average_Click);
             // 
             // MenuOper_Equ_Random
             // 
             this.MenuOper_Equ_Random.Name = "MenuOper_Equ_Random";
+<<<<<<< HEAD
             this.MenuOper_Equ_Random.Size = new System.Drawing.Size(152, 22);
+=======
+            this.MenuOper_Equ_Random.Size = new System.Drawing.Size(176, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Equ_Random.Text = "Random";
             this.MenuOper_Equ_Random.Click += new System.EventHandler(this.MenuOper_Equ_Random_Click);
             // 
             // MenuOper_Equ_Neighbor
             // 
             this.MenuOper_Equ_Neighbor.Name = "MenuOper_Equ_Neighbor";
+<<<<<<< HEAD
             this.MenuOper_Equ_Neighbor.Size = new System.Drawing.Size(152, 22);
+=======
+            this.MenuOper_Equ_Neighbor.Size = new System.Drawing.Size(176, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Equ_Neighbor.Text = "Neighborhood";
             this.MenuOper_Equ_Neighbor.Click += new System.EventHandler(this.MenuOper_Equ_Neighbor_Click);
             // 
             // MenuOper_Calculation
             // 
             this.MenuOper_Calculation.Name = "MenuOper_Calculation";
+<<<<<<< HEAD
             this.MenuOper_Calculation.Size = new System.Drawing.Size(138, 22);
+=======
+            this.MenuOper_Calculation.Size = new System.Drawing.Size(175, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Calculation.Text = "Calculation";
             this.MenuOper_Calculation.Click += new System.EventHandler(this.MenuOper_Calculation_Click);
             // 
             // MenuOper_Filters
             // 
             this.MenuOper_Filters.Name = "MenuOper_Filters";
+<<<<<<< HEAD
             this.MenuOper_Filters.Size = new System.Drawing.Size(138, 22);
+=======
+            this.MenuOper_Filters.Size = new System.Drawing.Size(175, 24);
+>>>>>>> FETCH_HEAD
             this.MenuOper_Filters.Text = "Filters";
             this.MenuOper_Filters.Click += new System.EventHandler(this.MenuOper_Filters_Click);
             // 
@@ -292,6 +402,7 @@
             this.MenuAbout.ForeColor = System.Drawing.Color.DarkGray;
             this.MenuAbout.Name = "MenuAbout";
             this.MenuAbout.ShortcutKeys = System.Windows.Forms.Keys.F1;
+<<<<<<< HEAD
             this.MenuAbout.Size = new System.Drawing.Size(52, 20);
             this.MenuAbout.Text = "About";
             this.MenuAbout.Click += new System.EventHandler(this.MenuAbout_Click);
@@ -310,6 +421,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(696, 427);
+=======
+            this.MenuAbout.Size = new System.Drawing.Size(62, 24);
+            this.MenuAbout.Text = "About";
+            this.MenuAbout.Click += new System.EventHandler(this.MenuAbout_Click);
+            // 
+            // MainWindow
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ClientSize = new System.Drawing.Size(870, 534);
+>>>>>>> FETCH_HEAD
             this.Controls.Add(this.MenuBar);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -362,7 +485,10 @@
         private System.Windows.Forms.ToolStripMenuItem MenuOper_Adj_Brightness;
         private System.Windows.Forms.ToolStripMenuItem MenuOper_Calculation;
         private System.Windows.Forms.ToolStripMenuItem MenuOper_Filters;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem projectToolStripMenuItem;
+=======
+>>>>>>> FETCH_HEAD
 
     }
 }
