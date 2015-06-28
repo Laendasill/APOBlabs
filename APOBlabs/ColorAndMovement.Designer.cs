@@ -32,11 +32,11 @@
             this.addImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsGifToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagesLayout = new System.Windows.Forms.TableLayoutPanel();
             this.Colormode = new System.Windows.Forms.CheckBox();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.ColorChoose = new System.Windows.Forms.Button();
-            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,13 @@
             this.saveAsGifToolStripMenuItem.Text = "Save as gif";
             this.saveAsGifToolStripMenuItem.Click += new System.EventHandler(this.saveAsGifToolStripMenuItem_Click);
             // 
+            // undoToolStripMenuItem
+            // 
+            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.undoToolStripMenuItem.Text = "Undo";
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
+            // 
             // ImagesLayout
             // 
             this.ImagesLayout.AutoScroll = true;
@@ -109,18 +116,11 @@
             // 
             this.ColorChoose.Location = new System.Drawing.Point(297, 56);
             this.ColorChoose.Name = "ColorChoose";
-            this.ColorChoose.Size = new System.Drawing.Size(75, 23);
+            this.ColorChoose.Size = new System.Drawing.Size(84, 23);
             this.ColorChoose.TabIndex = 2;
-            this.ColorChoose.Text = "button1";
+            this.ColorChoose.Text = "Wybór koloru";
             this.ColorChoose.UseVisualStyleBackColor = true;
             this.ColorChoose.Click += new System.EventHandler(this.ColorChoose_Click);
-            // 
-            // undoToolStripMenuItem
-            // 
-            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.undoToolStripMenuItem.Text = "Undo";
-            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // ColorAndMovement
             // 
